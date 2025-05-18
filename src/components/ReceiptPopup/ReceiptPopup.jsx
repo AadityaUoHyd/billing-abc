@@ -6,10 +6,10 @@ const ReceiptPopup = ({ orderDetails, onClose, onPrint }) => {
     return (
         <div className="receipt-popup-overlay text-dark">
             <div className="receipt-popup">
-                <div className="text-center mb-4">
+                <div className="text-center mb-3">
                     <i className="bi bi-check-circle-fill text-success fs-1"></i>
                 </div>
-                <h3 className="text-center mb-4">Order Receipt</h3>
+                <h3 className="text-center mb-3">Order Receipt</h3>
 
                 <p>
                     <strong>Order ID:</strong> {orderDetails.orderId}
@@ -20,8 +20,8 @@ const ReceiptPopup = ({ orderDetails, onClose, onPrint }) => {
                 <p>
                     <strong>Phone:</strong> {orderDetails.phoneNumber}
                 </p>
-                <hr className="my-3" />
-                <h5 className="mb-3">Items Ordered</h5>
+                <hr className="my-2" />
+                <h5 className="mb-2">Items Ordered</h5>
                 <div className="cart-items-scrollable">
                     {orderDetails.items.map((item, index) => (
                         <div key={index} className="d-flex justify-content-between mb-2">
@@ -30,23 +30,23 @@ const ReceiptPopup = ({ orderDetails, onClose, onPrint }) => {
                         </div>
                     ))}
                 </div>
-                <hr className="my-3" />
-                <div className="d-flex justify-content-between mb-2">
+                <hr className="my-2" />
+                <div className="d-flex justify-content-between mb-1">
                     <span><strong>Subtotal:</strong></span>
                     <span>₹{orderDetails.subtotal.toFixed(2)}</span>
                 </div>
 
-                <div className="d-flex justify-content-between mb-2">
+                <div className="d-flex justify-content-between mb-1">
                     <span><strong>Tax (CGST):</strong></span>
                     <span>₹{(orderDetails.tax * 0.5).toFixed(2)}</span>
                 </div>
 
-                <div className="d-flex justify-content-between mb-2">
+                <div className="d-flex justify-content-between mb-1">
                     <span><strong>Tax (SGST):</strong></span>
                     <span>₹{(orderDetails.tax * 0.5).toFixed(2)}</span>
                 </div>
 
-                <div className="d-flex justify-content-between mb-4">
+                <div className="d-flex justify-content-between mb-3">
                     <span><strong>Grand Total:</strong></span>
                     <span>₹{orderDetails.grandTotal.toFixed(2)}</span>
                 </div>
@@ -68,13 +68,13 @@ const ReceiptPopup = ({ orderDetails, onClose, onPrint }) => {
                     )
                 }
 
-                <div className="d-flex justify-content-center gap-3 mt-4">
+                <div className="d-flex justify-content-center gap-3 mt-3">
                     <button className="btn btn-warning" onClick={onPrint}>Print Receipt</button>
                     <button className="btn btn-danger" onClick={onClose}>Close</button>
                 </div>
 
                 {/* Add this below the buttons */}
-                <div className="text-center mt-4 mb-2">
+                <div className="text-center mt-3 mb-2">
                     <p className="fw-semibold text-success">Thank you for shopping with us!</p>
                 </div>
 

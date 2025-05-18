@@ -18,13 +18,11 @@
     width: 400px;
     max-width: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-height: 90vh;
-    overflow-y: auto;
+    /* Removed max-height: 90vh; and overflow-y: auto; to prevent scrolling */
 }
 
 .cart-items-scrollable {
-    max-height: 200px;
-    overflow-y: auto;
+    /* Removed max-height: 200px; and overflow-y: auto; to prevent scrolling */
     margin-bottom: 16px;
 }
 
@@ -34,7 +32,6 @@
 }
 
 .shop-name {
- 
     color: #6c757d;
 }
 
@@ -42,4 +39,3 @@ footer {
     font-size: 0.85rem;
     color: #6c757d;
 }
-
