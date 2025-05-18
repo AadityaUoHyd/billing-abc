@@ -1,0 +1,165 @@
+.footer {
+    background: rgba(45, 59, 85, 0.95);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(45, 200, 185, 0.3);
+    padding: 2rem 1rem;
+    color: #e5e7eb;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    z-index: 10;
+    
+}
+
+.footer-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.footer-logo {
+    height: 40px;
+    margin-right: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+    transform: scale(1.05);
+}
+
+.footer-slogan {
+    font-size: 0.9rem;
+    color: rgba(229, 231, 235, 0.8);
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-developed {
+    font-size: 0.9rem;
+    color: rgba(229, 231, 235, 0.8);
+    margin: 0;
+}
+
+.footer-developed a {
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-developed a:hover {
+    color: #2dd4bf;
+}
+
+.footer-links,
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2dd4bf;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #2dd4bf;
+}
+
+.footer-contact p {
+    font-size: 0.9rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(229, 231, 235, 0.2);
+    margin-top: 1.5rem;
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    color: rgba(229, 231, 235, 0.8);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 1.25rem;
+        align-items: stretch;
+    }
+
+    .footer-brand,
+    .footer-links,
+    .footer-contact {
+        min-width: 100%;
+    }
+
+    .footer-logo {
+        height: 32px;
+    }
+
+    .footer-logo-link {
+        font-size: 1.25rem;
+    }
+
+    .footer-heading {
+        font-size: 1rem;
+    }
+
+    .footer-link,
+    .footer-contact p,
+    .footer-slogan,
+    .footer-developed {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .footer-container {
+        gap: 1rem;
+    }
+
+    .footer-bottom p {
+        font-size: 0.8rem;
+    }
+}

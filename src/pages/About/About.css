@@ -1,0 +1,281 @@
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #1e2a44;
+    width: 100%;
+}
+
+.about-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.about-hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.about-logo {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.about-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin: 0;
+}
+
+.about-card {
+    background: rgba(45, 59, 85, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in;
+    width: 100%;
+    max-width: 800px;
+}
+
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2dd4bf;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.about-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.team-member {
+    text-align: center;
+    position: relative;
+}
+
+.team-image-wrapper {
+    position: relative;
+}
+
+.team-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.team-icon {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    font-size: 2rem;
+    color: #2dd4bf;
+    background: rgba(45, 59, 85, 0.8);
+    border-radius: 50%;
+    padding: 0.2rem;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover .team-icon {
+    transform: scale(1.2);
+}
+
+.team-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #e5e7eb;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.team-role {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin: 0;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.service-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-header svg {
+    font-size: 1.5rem;
+    color: #2dd4bf;
+    transition: color 0.3s ease;
+}
+
+.service-item:hover .service-header svg {
+    color: #38bdf8;
+}
+
+.service-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #e5e7eb;
+    margin: 0;
+}
+
+.service-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #e5e7eb;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .about-text {
+        font-size: 0.9rem;
+    }
+
+    .about-logo {
+        height: 48px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .team-image {
+        height: 350px;
+    }
+
+    .team-icon {
+        font-size: 1.75rem;
+        bottom: -8px;
+        right: -8px;
+    }
+
+    .team-name {
+        font-size: 1rem;
+    }
+
+    .team-role {
+        font-size: 0.85rem;
+    }
+
+    .service-header svg {
+        font-size: 1.3rem;
+    }
+
+    .service-title {
+        font-size: 1.1rem;
+    }
+
+    .service-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    .about-text {
+        font-size: 0.85rem;
+    }
+
+    .about-logo {
+        height: 40px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-image {
+        height: 140px;
+    }
+
+    .team-icon {
+        font-size: 1.5rem;
+        bottom: -6px;
+        right: -6px;
+    }
+
+    .service-header svg {
+        font-size: 1.2rem;
+    }
+
+    .service-title {
+        font-size: 1rem;
+    }
+
+    .service-text {
+        font-size: 0.85rem;
+    }
+}

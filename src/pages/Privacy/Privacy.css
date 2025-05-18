@@ -1,0 +1,136 @@
+.privacy-wrapper {
+    display: flex;
+    flex-direction: column;
+    background: #1e2a44;
+    width: 100%;
+}
+
+.privacy-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.privacy-hero {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.privacy-logo {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.privacy-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #e5e7eb;
+    margin: 0;
+}
+
+.privacy-card {
+    background: rgba(45, 59, 85, 0.95);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in;
+    width: 100%;
+    max-width: 800px;
+}
+
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2dd4bf;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.privacy-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin: 0 0 1rem 0;
+}
+
+.privacy-list {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #e5e7eb;
+    line-height: 1.6;
+    margin: 0 0 1rem 1.5rem;
+    padding: 0;
+}
+
+.privacy-list li {
+    margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .privacy-container {
+        padding: 1rem;
+    }
+
+    .privacy-card {
+        padding: 1.5rem;
+    }
+
+    .privacy-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .privacy-text {
+        font-size: 0.9rem;
+    }
+
+    .privacy-list {
+        font-size: 0.9rem;
+        margin-left: 1rem;
+    }
+
+    .privacy-logo {
+        height: 48px;
+    }
+}
+
+@media (max-width: 576px) {
+    .privacy-title {
+        font-size: 1.5rem;
+    }
+
+    .privacy-text {
+        font-size: 0.85rem;
+    }
+
+    .privacy-list {
+        font-size: 0.85rem;
+    }
+
+    .privacy-logo {
+        height: 40px;
+    }
+}

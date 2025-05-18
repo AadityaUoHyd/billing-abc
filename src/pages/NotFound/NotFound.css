@@ -1,0 +1,143 @@
+.not-found-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #1e2a44,
+        #020942
+    );
+    background-size: cover;
+    background-position: center;
+    padding: 1rem;
+    overflow-y: hidden;
+}
+
+.not-found-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.not-found-card:hover {
+    transform: translateY(-5px);
+}
+
+.not-found-content {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.not-found-icon {
+    margin-bottom: 1.5rem;
+}
+
+.not-found-icon svg {
+    animation: pulse 2s infinite;
+}
+
+.not-found-title {
+    font-size: 5rem;
+    font-weight: 700;
+    color: #dc3545;
+    margin: 0;
+    line-height: 1;
+    animation: fadeIn 1s ease-in;
+}
+
+.not-found-subtitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 1rem 0 0.5rem;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.not-found-message {
+    font-size: 1rem;
+    color: #6b7280;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.4s ease-in;
+}
+
+.not-found-button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.not-found-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .not-found-card {
+        max-width: 90%;
+    }
+
+    .not-found-title {
+        font-size: 3.5rem;
+    }
+
+    .not-found-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .not-found-message {
+        font-size: 0.9rem;
+    }
+
+    .not-found-content {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .not-found-title {
+        font-size: 2.5rem;
+    }
+
+    .not-found-subtitle {
+        font-size: 1.25rem;
+    }
+
+    .not-found-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+}
