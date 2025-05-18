@@ -166,6 +166,12 @@ Configure JWT secret in JwtUtil.java (if not hardcoded).
 
 - Frontend:
 ```
+VITE_BACKEND_URL=http://localhost:8080/api/v1.0
+#VITE_BACKEND_URL=https://billing-abc-backend.onrender.com/api/v1.0
+VITE_SHOP_NAME=ABC-Store #Assumming this is the name of store we are billing.
+VITE_SHOP_ADDRESS=Banjara Hiils, Road No-12, Hyderabad-500034
+VITE_SHOP_MOBILE=+91-9000000000 #Assumming this is the phone number of store we are billing.
+
 Ensure VITE_BACKEND_URL matches your backend URL.
 Verify CORS in SecurityConfig.java:@Bean
 public CorsConfigurationSource corsConfigurationSource() {
