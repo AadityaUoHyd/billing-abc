@@ -46,7 +46,7 @@ const App = () => {
     return (
         <div className="app-wrapper min-h-screen flex flex-col">
             {location.pathname !== "/login" && location.pathname !== "/" 
-            && location.pathname !== "/holidays" && location.pathname !== "/about" && location.pathname !== "/contact"
+            && location.pathname !== "/privacy" && location.pathname !== "/about" && location.pathname !== "/contact"
              && <Menubar />}
             <main className="app-content flex-1 ">
                 <Toaster />
