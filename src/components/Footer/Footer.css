@@ -7,7 +7,6 @@
     font-family: 'Inter', sans-serif;
     position: relative;
     z-index: 10;
-    
 }
 
 .footer-container {
@@ -18,11 +17,14 @@
     align-items: flex-start;
     gap: 2rem;
     flex-wrap: wrap;
+    padding-left: 40px; /* Added padding to left */
+    padding-right: 40px; /* Added padding to right */
 }
 
 .footer-brand {
     flex: 1;
     min-width: 200px;
+    text-align: left; /* Align content to left */
 }
 
 .footer-logo-link {
@@ -67,10 +69,16 @@
     color: #2dd4bf;
 }
 
-.footer-links,
+.footer-links {
+    flex: 1;
+    min-width: 200px;
+    text-align: center; /* Align content to center */
+}
+
 .footer-contact {
     flex: 1;
     min-width: 200px;
+    text-align: right; /* Align content to right */
 }
 
 .footer-heading {
