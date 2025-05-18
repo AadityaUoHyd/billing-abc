@@ -28,8 +28,8 @@ const Footer = () => {
                 </div>
                 <div className="footer-contact">
                     <h3 className="footer-heading">Contact Us</h3>
-                    <p>Email: <a href="mailto:support@billing-abc.com" className="footer-link">support@billing-abc.com</a></p>
-                    <p>Phone: <a href="tel:+919999999999" className="footer-link">+91-9999999999</a></p>
+                    <div>Email: <a href="mailto:support@billing-abc.com" className="footer-link">support@billing-abc.com</a></div>
+                    <div>Phone: <a href="tel:+919999999999" className="footer-link">+91-9999999999</a></div>
                 </div>
             </div>
             <div className="footer-bottom">

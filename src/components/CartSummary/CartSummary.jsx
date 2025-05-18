@@ -56,17 +56,34 @@ const CartSummary = ({ customerName, mobileNumber, setMobileNumber, setCustomerN
     const completePayment = async (paymentMode) => {
         setProcessingMode(paymentMode);
 
-        if (!customerName || !mobileNumber) {
-            if (mobileNumber.length !== 10) {
-                toast.error("Mobile number must be 10 digits");
-                setProcessingMode(null);
-                return;
-            }
-            if (customerName.trim().split(" ").length < 3) {
-                toast.error("Name must contain at least 3 words");
-                setProcessingMode(null);
-                return;
-            }
+        if (!customerName || customerName.trim() === "") {
+            toast.error("Customer name is required");
+            setProcessingMode(null);
+            return;
+        }
+
+        if (!mobileNumber || mobileNumber.trim() === "") {
+            toast.error("Mobile number is required");
+            setProcessingMode(null);
+            return;
+        }
+
+        // Validate customerName length (counting letters only, excluding spaces)
+        const nameLetters = customerName.trim().replace(/\s/g, "").length;
+        if (nameLetters <= 3) {
+            toast.error("Name must be more than 3 letters");
+            setProcessingMode(null);
+            return;
+        }
+        if (nameLetters >= 20) {
+            toast.error("Name must be less than 20 letters");
+            setProcessingMode(null);
+            return;
+        }
+
+        // Validate mobileNumber (exactly 10 digits)
+        if (!/^\d{10}$/.test(mobileNumber)) {
+            toast.error("Mobile number must be exactly 10 digits");
             setProcessingMode(null);
             return;
         }
